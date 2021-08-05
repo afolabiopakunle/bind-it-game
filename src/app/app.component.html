@@ -2,7 +2,7 @@
   <h2 class="fs-1">Even and Odd Number Counter</h2>
   <app-odd [oddNumber]='oddNumber'></app-odd>
   <app-even [evenNumber]='evenNumber'></app-even>
-
-  <app-game-control (onStart)="startClicked()" (onStop)="stopClicked()">
+  <hr>
+  <app-game-control (onClear)="clearClicked()" (onStart)="startClicked()" (onStop)="stopClicked()">
 </app-game-control>
 </div>

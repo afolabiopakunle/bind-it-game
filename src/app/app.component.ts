@@ -10,6 +10,7 @@ export class AppComponent  {
   evenNumber: number;
   oddNumber: number;
   control;
+
   startClicked() {
   this.control =  setInterval(()=> {
       this.targetNum++;
@@ -25,5 +26,10 @@ export class AppComponent  {
   stopClicked() {
     clearInterval(this.control);
     console.log('stopped')
+  }
+
+  clearClicked() {
+    this.evenNumber = null;
+    this.oddNumber = null;
   }
 }

@@ -9,6 +9,8 @@ export class GameControlComponent implements OnInit {
 
   @Output() onStart = new EventEmitter();
   @Output() onStop = new EventEmitter();
+  @Output() onClear = new EventEmitter();
+  gameStarted: boolean = false;
   constructor() { }
 
   ngOnInit() {
@@ -16,10 +18,15 @@ export class GameControlComponent implements OnInit {
 
   start() {
     this.onStart.emit();
+    this.gameStarted = !this.gameStarted
   }
 
   stop() {
     this.onStop.emit();
+  }
+
+  clear() {
+    this.onClear.emit()
   }
 
 }
