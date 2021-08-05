@@ -1,6 +1,8 @@
-<app-game-control 
-(onStart)="startClicked()" 
-(onStop)="stopClicked()">
+<div class="container pt-5">
+  <h2 class="fs-1">Even and Odd Number Counter</h2>
+  <app-odd [oddNumber]='oddNumber'></app-odd>
+  <app-even [evenNumber]='evenNumber'></app-even>
+
+  <app-game-control (onStart)="startClicked()" (onStop)="stopClicked()">
 </app-game-control>
-<app-odd [oddNumber]='oddNumber'></app-odd>
-<app-even [evenNumber]='evenNumber'></app-even>
+</div>
